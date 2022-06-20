@@ -20,7 +20,8 @@ function startGame() {
     if (chance <= 3) {
 
         if (guess === num) {
-            document.querySelector('#result').innerHTML = `<b>!!!!WHOOWHOOO!!!!<br>You guess the correct answer at ${chance}-th time</b>`;
+            document.getElementById('input_number').value = "";
+            document.querySelector('#result').innerHTML = `<b>!!!!WHOOWHOOO!!!!<br>You guess (${guess}) the correct answer at ${chance}-th time</b>`;
             document.querySelector('#result').style.color = "green";
             document.querySelector('#input_number').setAttribute('disabled', '');
             document.querySelector('#restart').style.visibility = "visible";
@@ -29,9 +30,12 @@ function startGame() {
             if (chance == 3) {
                 document.querySelector('#input_number').setAttribute('disabled', '');
                 document.querySelector('#restart').style.visibility = "visible";
+                document.querySelector('#correct_ans').innerHTML = `<b> Correct Answer : ${num} </b>`;
+                document.querySelector('#correct_ans').style.color = "green";
             }
-            document.querySelector('#result').innerHTML = `<b>Your guess is high!!!<br>${3 - chance} chance left</b>`;
+            document.querySelector('#result').innerHTML = `<b>Your guess (${guess}) is high!!!<br>${3 - chance} chance left</b>`;
             document.querySelector('#result').style.color = "red";
+            document.getElementById('input_number').value = "";
 
             chance++;
         }
@@ -39,9 +43,12 @@ function startGame() {
             if (chance == 3) {
                 document.querySelector('#input_number').setAttribute('disabled', '');
                 document.querySelector('#restart').style.visibility = "visible";
+                document.querySelector('#correct_ans').innerHTML = `<b> Correct Answer : ${num} </b>`;
+                document.querySelector('#correct_ans').style.color = "green";
             }
-            document.querySelector('#result').innerHTML = `<b>Your guess is low!!!<br>${3 - chance} chance left</b>`;
+            document.querySelector('#result').innerHTML = `<b>Your guess is (${guess}) low!!!<br>${3 - chance} chance left</b>`;
             document.querySelector('#result').style.color = "red";
+            document.getElementById('input_number').value = "";
             chance++;
         }
     }
