@@ -13,17 +13,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <h4 style="text-align: cneter;">Guess The Right Number</h4>
-        <button id="start" type="button" style="background-color: green;color: white;">START GAME</button>
-    </div>
-    <div class="container guess_num_form">
-        <label for="number" id="hint">Guess a number between 20 to 40</label>
-        <input type="number" placeholder="input a number" name="number" id="input_number">
-        <button id="submit_number" style="background-color: green;color: white; ">OK</button>`;
-    </div>
-    <div class="container">
-        <p id="result"></p>
+    <div style="text-align: center;">
+        <div class="container">
+            <h4 style="text-align: cneter;">Guess The Right Number</h4>
+            <button id="start" type="button" style="background-color: green;color: white;">START GAME</button>
+        </div>
+        <div class="container guess_num_form" style="visibility: hidden;">
+            <label for="number" id="hint" style="font-family: monospace; font-size: 20px;">Guess a number between 20 to
+                40</label>
+            <input type="number" placeholder="input a number" name="number" id="input_number">
+            <button id="submit_number" style="background-color: green;color: white; ">OK</button>`;
+        </div>
+        <div class="container">
+            <p id="result"></p>
+            <button type="button" id="restart"
+                style="visibility: hidden; color: white; background-color: green;">RESTART</button>
+        </div>
     </div>
 
 
