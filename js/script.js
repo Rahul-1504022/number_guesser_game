@@ -1,11 +1,10 @@
-//function
-
-
+//global variable
 let min = 20;
 let max = 40;
 let num = getRandom(min, max);
-console.log(num);
 let chance = 1;
+
+//function
 
 //Random Number Generator
 function getRandom(min, max) {
